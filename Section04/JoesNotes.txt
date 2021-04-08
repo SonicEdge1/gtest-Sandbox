@@ -1,0 +1,19 @@
+
+COMPILING GOOGLE TEST
+
+# to complile google test code
+cmake CMakeLists.txt
+# installs google test
+sudo make install
+
+-OR-
+# the following command creates the gmock-all.o gmock_main.o and gtest-all.o files
+g++-7 -c googletest/googletest/src/gtest-all.cc googletest/googlemock/src/gmock-all.cc googletest/googlemock/src/gmock_main.cc -I googletest/googletest -I googletest/googletest/include -I googletest/googlemock -I googletest/googlemock/include -lpthread -std=c++14
+# the following command combines all the object files into a single static library
+ar crv libgtest.a gtest-all.o gmock_main.o gmock-all.o
+
+
+
+COMPILING TEST CODE 
+
+g++-7 -o <testfile> src/Math.cpp test/MathTest.cpp -I googletest/googletest -I googletest/googletest/include -I googletest/googlemock -I googletest/googlemock/include -I src libgtest.a -lpthread

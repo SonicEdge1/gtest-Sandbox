@@ -1,0 +1,20 @@
+current directory: /home/test/Section06/cucumber-cpp/vendor/bundle/ruby/2.3.0/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+/usr/bin/ruby2.3 -r ./siteconf20180221-8417-15w61dl.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/test/Section06/cucumber-cpp/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/gherkin-2.12.2/mkmf.log
+
+current directory: /home/test/Section06/cucumber-cpp/vendor/bundle/ruby/2.3.0/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR=" clean
+
+current directory: /home/test/Section06/cucumber-cpp/vendor/bundle/ruby/2.3.0/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR="
+compiling gherkin_lexer_zh_tw.c
+linking shared-object gherkin_lexer_zh_tw.so
+
+current directory: /home/test/Section06/cucumber-cpp/vendor/bundle/ruby/2.3.0/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gherkin_lexer_zh_tw.so ./.gem.20180221-8417-pgpcgq

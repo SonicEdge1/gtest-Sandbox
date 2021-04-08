@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(starting)
+
+#Locate Gtest
+
+message(STATUS "Gtest dir is : ${GTEST_INCLUDE_DIRS}")
+message(STATUS "Gtest dir is : ${GTEST_LIBRARIES}")
+
+#Link run executable with tests
+
+IF (BUILD_TESTS)
+enable_testing()
+find_package(GTest REQUIRED)
+#include_directories(${GTEST_INCLUDE_DIRS}) 
+MESSAGE(STATUS "Building tests..")
+ENABLE_TESTING()
+add_executable(executeTests gmock1.cpp)
+target_link_libraries(executeTests ${GTEST_LIBRARIES} gmock pthread)
+#add this once you have a test directory
+#ADD_SUBDIRECTORY(tests)
+ENDIF (BUILD_TESTS)
+
